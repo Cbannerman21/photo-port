@@ -29,7 +29,7 @@ function Nav() {
                     </li>
                     {categories.map((category) => (
                         <li className="mx-1" key={category.name}>
-                            <span onClick={() =>categorySelected(category.name)} >
+                            <span onClick={() =>categorySelected(category.nameclea)} >
                                 {category.name}
                             </span>
                         </li>
