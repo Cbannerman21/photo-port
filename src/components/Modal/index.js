@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-function Modal({currentPhoto}) {
+const Modal = ({onClose, currentPhoto}) => {
     const {name, category, description, index} = currentPhoto;
     const [isModalOpen, setIsModalOpen] = useState(false);
+    
 
     return (
         <div className="modalBackdrop">
@@ -11,7 +12,7 @@ function Modal({currentPhoto}) {
             <img src={require(`../../assets/large/${category}/${index}.jpg`)} alt="current category" />
 
             <p>{description}</p>
-            <button type="button">
+            <button onClick={onClose} type="button">
                 Close this modal
             </button>
         </div>
